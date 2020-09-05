@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+		* { 
+			margin: 0; padding: 0;
+			box-sizing: border-box;
+			text-decoration: none;
+			list-style: none;
+		 }
+
+		 #fundo {
+		 	width: 100%; height: 100vh;
+		 	background: #363636;
+
+		 	display: flex; justify-content: center;
+		 	align-items: center;
+		 }
+
+		 #secao {
+		 	background: ghostwhite;
+		 	border-radius: 5px;
+		 	width: 300px; height: 300px;
+		 	display: flex; justify-content: center;
+		 	align-items: center;
+		 }
+
+		 .konami_ativado { transform: rotateX(180deg); }
+
+		 sup {
+		 	border-radius: 50%;
+		 	background-color: #363636;
+		 	color: ghostwhite;
+		 	text-align: center;
+		 	padding: 0px 5px;
+		 }
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+	<div id="fundo">
+		<div id="secao">
+			<h1>
+				<ruby>
+					Konamis Code <rt>I challenge you discover out the code!</rt>
+				</ruby>
+			</h1>
+			<sup>i</sup>
+		</div>
+	</div>
+</body>
+
+<script type="text/javascript">
+	var codigo = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
+	var index = 0;
+
+	$(document).keyup(function(e) {
+		if (codigo[index] == e.which) {
+			index++;
+
+			if (index == 10) {
+				alert("You got it!");
+
+				if ($("#fundo").hasClass("konami_ativado")) {
+					$("*").removeClass("konami_ativado");
+				}
+				else {
+					$("*").addClass("konami_ativado");
+				}
+
+				index = 0;
+			}
+		}
+		else { index = 0; }
+	});
+</script>
+
+</html>

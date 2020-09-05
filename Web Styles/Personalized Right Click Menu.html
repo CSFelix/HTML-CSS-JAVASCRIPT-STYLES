@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		* {
+			margin: 0; padding: 0; list-style: none;
+			text-decoration: none;
+		}
+
+		.menu {
+			border: 2px solid black;
+			color: ghostwhite;
+			background: steelblue;
+			position: absolute;
+			display: none;
+			width: 200px;
+			text-indent: 5px;
+			box-shadow: 0px 0px 20px black;
+		}
+
+		li {
+			border-bottom: 2px solid black;
+			padding: 2px;
+		}
+
+		li:hover {
+			background: rgba(0, 0, 0, 0.2);
+			cursor: pointer;
+		}
+
+		#box {
+			background: #363636;
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+		}
+
+		#content {
+			width: 200px;
+			height: 200px;
+			border: 2px solid black;
+			background: gold;
+		}
+
+		h1 {
+			color: ghostwhite;
+			text-decoration: underline;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="box">
+		<!-- Personalized Context Menu -->
+		<nav class="menu">
+			<ul class="menu-options">
+				<li class="menu-option">Add\Remove Friend</li>
+				<li class="menu-option">Block Friend</li>
+				<li class="menu-option">Alert</li>
+				<li class="menu-option">View</li>
+			</ul>
+		</nav>
+
+		<h1>Try out the Right Click!</h1><br><br>
+		<div id="content"></div>
+
+		
+	</div>
+	
+</body>
+	<script type="text/javascript">
+	const menu = document.querySelector(".menu");
+	let menuVisible = false;
+
+	const toggleMenu = command => {
+  		menu.style.display = command === "show" ? "block" : "none";
+  		menuVisible = !menuVisible;
+	};
+
+	const setPosition = ({ top, left }) => {
+  		menu.style.left = `${left}px`;
+  		menu.style.top = `${top}px`;
+ 		toggleMenu("show");
+	};
+
+	window.addEventListener("click", e => {
+  		if(menuVisible)toggleMenu("hide");
+	});
+
+	window.addEventListener("contextmenu", e => {
+  		e.preventDefault();
+  		const origin = {
+    		left: e.pageX,
+    		top: e.pageY
+  		};
+  		setPosition(origin);
+  		return false;
+	});
+	</script>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>..:: Button ::..</title>
+
+	<style type="text/css">
+		:root {
+			--neon-primary-color: #2196f3;
+			--neon-secundary-color: #87CEEB;
+
+			--background: #363636;
+			--letter: ghostwhite;
+		}
+
+		/* Reset */
+		* { margin: 0; padding: 0; box-sizing: border-box; text-decoration: none; outline: none; }
+
+		.flexContainer { 
+			/* Flex Center Objects */
+			display: flex; align-items: center; justify-content: center; 
+
+			background: var(--background); width: 100vw; height: 100vh;
+		}
+
+		.button3D {
+			cursor: pointer;
+			padding: 10px; background-color: var(--neon-primary-color);
+			color: var(--letter); border-radius: 10px;
+			box-shadow: 3px 3px var(--background);
+			transition: 500ms ease,
+	            color 0.6s ease-out,
+	            box-shadow 0.3s ease 0.2s;
+			float: left; margin-right: 5px;	
+		}
+
+		.button3D:active {
+			transform: translate(5px, 5px);
+		}
+
+		.neon:hover, .neon:active {
+			box-shadow: 0px 0px 10px var(--neon-primary-color),
+			    0px 0px 40px var(--neon-primary-color),
+			    0px 0px 80px var(--neon-primary-color);
+		}
+	</style>
+</head>
+<body>
+	<section class="flexContainer">
+		<button class="button3D neon">Hover and Click Me!</button>
+	</section>
+</body>
+</html>

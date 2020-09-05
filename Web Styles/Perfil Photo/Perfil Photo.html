@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" href="ChatME!.png">
+	<title></title>
+	<style>
+    body {
+        background: #363636;
+    }
+
+    #container {
+        width: 100vw;
+        height: 100vh;
+        background: transparent;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+	.profile-pic {
+        border-radius: 50%;
+        height: 150px;
+        width: 150px;
+        background-size: cover;
+        background-position: center;
+        background-blend-mode: multiply;
+        vertical-align: middle;
+        text-align: center;
+        color: transparent;
+        transition: all .3s ease;
+        text-decoration: none;
+        background-image: url("ChatME!.png");
+    }
+
+    .profile-pic:hover {
+        background-color: rgba(0,0,0,.5);
+        z-index: 10000;
+        color: #fff;
+        transition: all .3s ease;
+        text-decoration: none;
+    }
+
+    .profile-pic span {
+     display: inline-block;
+        padding-top: 4.5em;
+        padding-bottom: 4.5em;
+    }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <a href="#" class="profile-pic">
+            <div class="profile-pic" >
+                <span>Change Perfil's Photo!</span>
+            </div>
+        </a>
+    </div>
+</body>
+</html>

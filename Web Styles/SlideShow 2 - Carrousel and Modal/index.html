@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SlideShow</title>
+
+	<link rel="stylesheet" type="text/css" href="css\style-padrao.css">
+	<link rel="stylesheet" type="text/css" href="css\style-modal.css">
+	<link rel="stylesheet" type="text/css" href="css\style-slide-show.css">
+</head>
+<body>
+	<div class="container">
+		<div class="content">
+			<div id="menu">
+				<ol>
+					<a href="#goku"><li>Goku</li></a>
+					<a href="#vegeta"><li>Vegeta</li></a>
+					<a href="#kuririn"><li>Kuririn</li></a>
+					<a href="#gohan"><li>Gohan</li></a>
+					<a href="#picollo"><li>Picollo</li></a>
+				</ol>	
+			</div>
+
+			<!--------------->
+
+			<div id="descricao">
+				<br><br>
+				<section>
+					<center><h3 id="goku" class="tag">Goku</h3></center>
+					<br><br>
+
+					<div class="slideshow-container">
+
+						<div class="mySlides fade">
+  							<div class="numbertext">1 / 3</div>
+  							<img id="myImg1" class="imagem" src="imagens\ARQUEIRA.png" style="width:65vw; height: 550px;">
+  							<div class="text">Arqueira</div>
+						</div>
+
+						<div class="mySlides fade">
+  							<div class="numbertext">2 / 3</div>
+  							<img id="myImg2" class="imagem" src="imagens\BLACK.png" style="width:65vw; height: 550px;">
+  							<div class="text">Black</div>
+						</div>
+
+						<div class="mySlides fade">
+  							<div class="numbertext">3 / 3</div>
+  							<img id="myImg3" class="imagem" src="imagens\debian.png" style="width:65vw; height: 550px;">
+  							<div class="text">Debian</div>
+						</div>
+
+						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+						<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+					</div>
+					<br>
+
+					<div style="text-align:center">
+  						<span class="dot" onclick="currentSlide(1)"></span> 
+  						<span class="dot" onclick="currentSlide(2)"></span> 
+  						<span class="dot" onclick="currentSlide(3)"></span> 
+					</div>
+
+
+					<!-- The Modal -->
+					<div id="myModal1" class="modal">
+  						<span id="close1" class="close">&times;</span>
+  						<img class="modal-content" id="img01">
+  						<div id="caption">Arqueira</div>
+					</div>
+					
+
+					<!-- The Modal -->
+					<div id="myModal2" class="modal">
+  						<span id="close2" class="close">&times;</span>
+  						<img class="modal-content" id="img02">
+  						<div id="caption">Black</div>
+					</div>
+
+					<!-- The Modal -->
+					<div id="myModal3" class="modal">
+  						<span id="close3" class="close">&times;</span>
+  						<img class="modal-content" id="img03">
+  						<div id="caption">Debian</div>
+					</div>
+				</section>
+
+				<br><br>
+				<section>
+					<h3 id="vegeta" class="tag">Vegeta</h3>
+				</section>
+
+				<br><br>
+				<section>
+					<h3 id="kuririn" class="tag">Kuririn</h3>
+				</section>
+
+				<br><br>
+				<section>
+					<h3 id="gohan" class="tag">Gohan</h3>
+				</section>
+				<br><br>
+
+				<section>
+					<h3 id="picollo" class="tag">Picollo</h3>
+				</section>
+			</div>
+
+			<!----------------------->
+
+		</div>
+	</div>
+</body>
+
+	<script type="text/javascript" src="js\script-modal.js"></script>
+	<script type="text/javascript" src="js\script-slide-show.js"></script>
+</html>

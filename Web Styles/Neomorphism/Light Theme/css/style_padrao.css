@@ -1,0 +1,24 @@
+:root {
+	--cor-principal: #cbced1;
+	--cor-auxiliar: blue;
+	--cor-letra: #363636;
+
+	--linear-light: #d9dce0;
+	--linear-dark: #b7b9bc;
+
+	--shadow-light: #ffffff;
+	--shadow-dark: #57595a;
+}
+
+* { 
+	margin: 0; padding: 0; text-decoration: none; 
+	color: black; box-sizing: border-box;
+	outline: none; color: var(--cor-letra);	
+}
+
+.container {
+	width: 100vw; height: 100vh;
+	display: flex; justify-content: center;
+	align-items: center;
+	background-color: var(--cor-principal);
+} 

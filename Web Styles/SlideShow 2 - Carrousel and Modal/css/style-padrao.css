@@ -1,0 +1,28 @@
+		* { margin: 0; padding: 0; text-decoration: none; list-style: none; box-sizing: border-box; }
+		.tag { width: 75px; background-color: dodgerblue; color: ghostwhite; padding: 5px; border-radius: 5px; }
+		
+		.container {
+			width: 100%; height: 100vh; background-color: #363636;
+			display: flex; justify-content: center; align-items: center;
+		}
+
+		.content {
+			width: 96vw; height: 96vh; border-radius: 5px;
+			background-color: ghostwhite;
+
+			display: flex;
+		}
+
+		#menu {  width: 15vw; border-right: 2px solid gold;}
+
+		#menu ol li {
+			padding: 5px; text-decoration: underline;
+			color: blue; text-indent: 5px;
+		}
+
+		#menu ol li:hover { color: dodgerblue; }
+		#menu ol li:focus { color: dodgerblue; }
+
+		#descricao { width: 85vw; display: flex; align-items: center; flex-direction: column; overflow: auto; }
+
+		

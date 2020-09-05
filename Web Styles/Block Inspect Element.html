@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		* { margin: 0; padding: 0; }
+		body { background: #363636; color: ghostwhite;}
+		.flexContainer { display: flex; align-items: center; justify-content: center; width: 100vw; height: 100vh; }
+		.tag { background: red; padding: 5px; color: #363636; border-radius: 5px; }
+	</style>
+</head>
+<body>
+	<section class="flexContainer">
+		<h1 class="tag">Try to open Inspect Element's window!</h1>
+	</section>
+</body>
+
+<script type="text/javascript">
+	// Right Mouse Click
+	document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+
+	document.onkeydown = function(e) {
+
+		// F12
+  		if(event.keyCode == 123) { return false; }
+
+  		// CTRL SHIFT I
+  		if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) { return false; }
+
+  		// CTRL SHIFT C
+  		if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) { return false; }
+
+  		// CTRL SHIFT J
+  		if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) { return false; }
+
+  		// CTRL U
+  		if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) { return false; }
+	}
+</script>
+
+</html>
