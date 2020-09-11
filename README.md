@@ -16,3 +16,12 @@
 ### `⚙️ Run ⚙️`
 
 * Just download the files and open in your browser!!!
+
+----
+### `✉️ Contact ✉️`
+
+> **Email:** `gabrielfelix08@outlook.com`
+
+> **Linkedin:** `---`
+
+> **Instagram:** `---`
