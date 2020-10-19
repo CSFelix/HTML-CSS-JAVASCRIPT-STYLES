@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+		button#toast-button {
+			font-family: 'Open Sans', sans-serif;
+			font-size: 1.2rem;
+			color: #fff;
+
+			background: #ff4754;
+			padding: 1.2rem 2.4rem;
+			border-radius: 0.2rem;
+
+			transition: opacity 0.2s;
+		}
+
+		button#toast-button:hover {
+			cursor: pointer;
+			opacity: 0.8;
+		}
+
+		#toast-message {
+			position: fixed;
+			top: -8rem; left: 75vw;
+			opacity: 0;
+
+			user-select: none;
+			color: #363636;
+			background: dodgerblue;
+			border-bottom: 2px solid lightskyblue;
+
+			padding: 1.2rem 2.4rem;
+			border-radius: 0.2rem;
+			box-shadow: 3px 6px 12px rgba(0, 0, 0, 0.4);
+
+			transition: bottom 0.4s ease;
+		}
+
+		#toast-message.show {
+			top: 2rem;
+			opacity: 1;
+			transition: top 1s ease, opacity 2s ease;
+		}
+	</style>
+</head>
+<body>
+	<button id="toast-button">
+		Make Payment
+	</button>
+
+	<div id="toast-message">
+		🎉 Payment SUccesful 🎉
+	</div>
+</body>
+<script type="text/javascript">
+	const button = document.getElementById('toast-button');
+	const toast = document.getElementById('toast-message');
+
+	button.addEventListener('click', () => {
+		toast.classList.add('show');
+		setTimeout(() => {
+			toast.classList.remove('show');
+		}, 2000);
+	});
+</script>
+</html>
