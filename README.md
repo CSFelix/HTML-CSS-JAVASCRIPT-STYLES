@@ -24,4 +24,4 @@
 
 > **Linkedin:** `---`
 
-> **Instagram:** `---`
+> **Instagram:** `instagram.com/c0deplus`
